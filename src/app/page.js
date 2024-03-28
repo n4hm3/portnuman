@@ -1,116 +1,56 @@
-import Image from "next/image"
-import pfp from "./pfp.jpg"
-import p1 from "./p1.png"
-import p2 from "./p2.jpg"
-import p3 from "./p3.png"
-import p4 from "./p4.jpg"
-import {AiFillLinkedin, AiFillGithub, AiFillInstagram} from 'react-icons/ai'
-import {FaPython, FaJs, FaReact, FaHtml5, FaGitAlt, FaCss3Alt, FaHackerrank} from 'react-icons/fa'
+
+import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from 'react-icons/ai';
+import { FaPython, FaJs, FaReact, FaHtml5, FaGitAlt, FaCss3Alt, FaHackerrank } from 'react-icons/fa';
+import { TypeAnimation } from 'react-type-animation';
+import Project from "./project.js";
 
 export default function Home() {
   return (
-    <div className="text-black font-sans">
-        <head>
-          <title>Numan Ahmed</title>
-        </head>
+    <html>
+      <head>
+        <title>Numan Ahmed</title>
+      </head>
+      <body >
+        <nav className="py-5 flex justify-between md:px-3 sm:px-4">
+          <h1 className="text-xl font-bold font-sans">Numan Ahmed.</h1>
+          <ul className="flex items-center">
+            <li><a href="mailto:nahmedshaon@gmail.com" target="_blank" className="text-sm font-bold px-1 py-1 rounded-md">CONTACT ME |</a></li>
+          <ul className="flex text-xl items-center ">
+            <li><a href="https://www.linkedin.com/in/numan-ahmed-711299282/" target="_blank" className=""><AiFillLinkedin /></a></li>
+            <li><a href="https://github.com/n4hm3" target="_blank" className=""><AiFillGithub /></a></li>
+            <li><a href="https://www.instagram.com/nas4_4/" target="_blank" className=""><AiFillInstagram /></a></li>
+          </ul>
+          </ul>
+        </nav>
+        <main className="md:px-20 sm:px-4">
+          <section className="min-h-screen">
 
-      <main className="bg-white lg:px-32 md:px-3 sm:px-0">
-        <section className=" bg-white min-h-screen">
-          <nav className="py-10 mb-12 flex justify-between">
-            <h1 className="text-xl font-bold font-sans ">Numan Ahmed.</h1>
-            <ul className=" flex items-center">
-              <li><a href="mailto:nahmedshaon@gmail.com" target="_blank" className=" font-bold bg-gradient-to-r bg-red-300 px-1 py-1 rounded-md" >Contact me</a></li>
-            </ul>
-          </nav>
-
-        <div className="flex justify-center">
-
-          <div className=" relative rounded-full w-40 h-40 overflow-hidden">
-            <Image src={pfp} layout="fill" objectFit="cover"/>
-        
-          </div>
-          <div className=" font-mono ps-6 pt-8 md:py-9 md:leading-10 lg:py-12">
-            <h2 className="md:text-xl sm:text-sm">Hi, I am a first year <span className=" text-red-300">computer science </span>student.</h2>
-            <h3>Check out some of my work below ↓ </h3>
-
-          </div> 
-          </div>
-
-
-          <h1 className=" font-mono font-bold pt-24 pb-5 text-3xl flex justify-center">COMPENTENCIES</h1>
-
-          <div className="flex text-5xl justify-center">
-            <li className="flex md:gap-10">
-            <FaPython /> <FaHtml5/> <FaCss3Alt/> <FaJs /> <FaReact /> <FaGitAlt/> </li>
-            
-          </div>
-
-          <h1 className=" font-mono font-bold pt-24 pb-5 text-3xl flex justify-center">PROJECTS</h1>
-
-          <div className="md:flex sm:flex-none lg:gap-10 md:gap-5">
- 
-          <div className=" md:w-1/2 sm:w-full font-mono border-8 p-10 rounded-xl my-5 shadow-2xl ">
-            <h3 className="text-xl pb-4">Photography Portfolio Site</h3>
-            <Image className="w-9/10 border-4" src={p1} />
-            <p className="pt-4 text-gray-500"> Created using vanilla JavaScript, HTML and CSS. Design prototypes made using Figma </p> 
-            <div>
-            <spam className="bg-red-300 p-1"> <a href="https://aristfe.github.io/portfolio/index.html" target="_blank">Go to site </a></spam>
+            <div className="flex justify-center">
+              <div className="text-5xl ps-6 pt-8 md:py-9 md:leading-10 lg:py-12">
+                <h2>Hi, my name is Numan</h2>
+                <h3>Check out some of my work below ↓</h3>
+              </div>
             </div>
-          </div>
+            <h1 className="font-bold pt-24 pb-5 text-3xl flex justify-left">PROJECTS</h1>
+            <div className='pt-2'>
+            <Project title="<Flower_Recognition_CNN />" video="FlowerCNN.mp4" description="Developed a flower classification system for identifying different types of flowers through deep learning and image processing, resulting in an average accuracy of 90%. I learned a lot about Convolutional Neural Network (CNN) architecture and how to combine different libraries for data manipulation. I used 4 layers, a ReLU activation function and trained over 10 epochs." techStack="Python/TensorFlow/Keras/OpenCV/Scikit-learn" link="https://github.com/n4hm3/FlowerRecognition"/>
+</div>
+            <div className='pt-2'>
+            <Project title="<Photography_Portfolio_Website />" video="PhotoPort.mp4" description="Designed a portfolio page to display my friend’s photography. I designed the website in Figma and then implemented it in Vanilla HTML, CSS and JavaScript. This was my first attempt at web development and have learned a lot since then. I hope to remake this page in the future with faster image loading time and a more creative design. I used GitHub pages to host the site." techStack="HTML/JS/CSS" link="https://aristfe.github.io/portfolio/index.html"/>
+</div>
+            <div className='pt-2'>
+            <Project title="<Sandunes_2D_Platformer />" video="SandunesPy.mp4" description="Inspired by games like Mario and Hollow Knight, I made a tile based platformer. I used an object oriented approach and cycled through many iterations. Using the PyGame library I learned to read documentation efficiently. I also learned a lot about pixel art and animation. Credit to DaFluffyPotato for the engine file I used in the later iterations." techStack="Python/PyGame/OOP" link="https://github.com/n4hm3/sandDunesPlatformer"/>
+</div>
+            <div className='pt-2'>
+            <Project title="<Sorting_Algorithm_Visualiser_CLI />" video="sortingAlgo.mp4" description="To gain a more intuitive understanding of the algorithms I learned from lectures, I implemented them in Java. This was a fun puzzle that helped me engage with the content. I hope to make more visualisations in the future using different programming languages and tools." techStack="Java/Terminal" link="https://github.com/n4hm3/SortingAlgoVisuals"/>
+</div>
 
-
-          <div className=" md:w-1/2 sm:w-full font-mono border-8 p-10 rounded-xl my-5 shadow-2xl ">
-            <h3 className="text-xl pb-4"> Flower Recognition AI </h3>
-            <Image className=" w-96 border-4" src={p2} />
-              <p className="pt-4 text-gray-500"> Created using Python with TensorFlow, OpenCV, Pandas, Numpy and Matplotlib libraries using a dataset from Kaggle</p> 
-              <spam className="bg-red-300 p-1"> <a href="https://github.com/n4hm3?tab=repositories" target="_blank">GitHub</a></spam>
-          </div>
-                      
-          </div>
-
-
-          <div className=" md:flex justify-center sm:flex-none lg:gap-10 md:gap-5 shadow-2xl ">
-            <div className=" md:w-1/2 sm:w-full font-mono justify-center border-8 p-10 rounded-xl my-5 shadow-2xl">
-              <h3 className="text-xl pb-4">2D Platformer</h3>
-              <Image className="w-9/10 border-4" src={p3} />
-              <p className="pt-4 text-gray-500"> Created using Python with the PyGame Library</p> 
-              <spam className="bg-red-300 p-1"> <a href="https://github.com/n4hm3?tab=repositories" target="_blank">GitHub</a></spam>
-            </div>
-
-            <div className=" md:w-1/2 sm:w-full font-mono justify-center border-8 p-10 rounded-xl my-5 shadow-2xl ">
-              <h3 className="text-xl pb-4">Ecommerce Website</h3>
-              <Image className="w-9/10 border-4 blur-sm" src={p4} />
-              <p className="pt-4 text-gray-500"> Work in progress...</p> 
-            </div>
-
-        </div>
-            <div className=" flex justify-between bg-white py-2 ">
-              <p className="text-xs md:pt-10 sm:pt-0">Made by Numan Ahmed using reactJS and tailwindcss</p>
-              <li className=" md:text-5xl text-2xl flex gap-4 ">
-                <a href="https://www.instagram.com/nas4_4/" target="_blank"> <AiFillInstagram /> </a>
-                <a href="https://www.linkedin.com/in/numan-ahmed-711299282/" target="_blank"> <AiFillLinkedin /> </a>
-                <a href="https://github.com/n4hm3" target="_blank"> <AiFillGithub/> </a>
-                <a href="https://www.hackerrank.com/n4hm3" target="_blank"> <FaHackerrank/> </a>
-              </li>
-            </div>
- 
-          { /* add the names of the competencies
-            <div className="text-xl flex justify-center gap-8 ">
-            <spam className="bg-red-100 ">Python</spam> <spam className="bg-red-100">HTML</spam> <spam className="bg-red-100 ">CSS</spam> <spam className="bg-red-100 ">JavaScript</spam> <spam className="bg-red-100 ">ReactJS</spam> <spam className="bg-red-100 ">Git</spam>
-            </div>
-            <div className=" text-3xl flex justify-center gap-4 ">
-              <li className="text-3xl flex gap-4 pe-4">
-                <a href="https://www.instagram.com/nas4_4/" target="_blank"> <AiFillInstagram /> </a>
-                <a href="https://www.linkedin.com/in/numan-ahmed-711299282/" target="_blank"> <AiFillLinkedin /> </a>
-                <a href="https://github.com/n4hm3" target="_blank"> <AiFillGithub/> </a>
-                <a href="https://www.hackerrank.com/n4hm3" target="_blank"> <FaHackerrank/> </a>
-              </li>
-            </div>
-          */}
-
-
-        </section>     
-      </main>
-    </div>
-  )
+          </section>
+        </main>
+        <footer className="flex justify-between md:px-3 sm:px-4">
+          <p className="text-sm">© {new Date().getFullYear()} Numan Ahmed</p>
+        </footer>
+      </body>
+    </html>
+  );
 }
