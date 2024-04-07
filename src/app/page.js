@@ -1,7 +1,7 @@
 
 import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from 'react-icons/ai';
-import { FaPython, FaJs, FaReact, FaHtml5, FaGitAlt, FaCss3Alt, FaHackerrank } from 'react-icons/fa';
-import { TypeAnimation } from 'react-type-animation';
+import { FaXTwitter } from 'react-icons/fa6';
+// import { TypeAnimation } from 'react-type-animation';
 import Project from "./project.js";
 
 export default function Home() {
@@ -19,6 +19,7 @@ export default function Home() {
             <li><a href="https://www.linkedin.com/in/numan-ahmed-711299282/" target="_blank" className=""><AiFillLinkedin /></a></li>
             <li><a href="https://github.com/n4hm3" target="_blank" className=""><AiFillGithub /></a></li>
             <li><a href="https://www.instagram.com/nas4_4/" target="_blank" className=""><AiFillInstagram /></a></li>
+            <li><a href="https://twitter.com/n4hm3" target="_blank" className=""><FaXTwitter /></a></li>
           </ul>
           </ul>
         </nav>
@@ -43,6 +44,9 @@ export default function Home() {
 </div>
             <div className='pt-2'>
             <Project title="<Sorting_Algorithm_Visualiser_CLI />" video="sortingAlgo.mp4" description="To gain a more intuitive understanding of the algorithms I learned from lectures, I implemented them in Java. This was a fun puzzle that helped me engage with the content. I hope to make more visualisations in the future using different programming languages and tools." techStack="Java/Terminal" link="https://github.com/n4hm3/SortingAlgoVisuals"/>
+</div>
+            <div className='pt-2'>
+            <Project title="<Levitate_Study_Timer />" video="levitate.mp4" description="Studying and working on various projects I have often found myself seeking ways to be more productive. The classic Pomodoro timer is a technique which I have been using for a while. However, I found several drawbacks and limitations. One main issue I faced was that my duration of focus fluctuates often as it is dependent on many factors. To combat this I created an app which counts up rather than down and lets you decide when you want your breaks. By doing this I have made it much easier to enter a state of flow. I hope to make this app available on all platforms. Some features I look forward to including are A history page and push notifications." techStack="ReactNative/Expo/NativeWind" link="https://github.com/n4hm3/levitate"/>
 </div>
 
           </section>

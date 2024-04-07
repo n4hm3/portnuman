@@ -1,12 +1,19 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 
 const Project = ({ title, video, description, techStack, link }) => {
     const [isExpanded, setIsExpanded] = useState(false);
+    const [mobileApp, setMobileApp] = useState(false);
 
     const toggleExpand = () => {
         setIsExpanded(!isExpanded);
     };
+
+    useEffect(() => {
+        if (techStack.slice(0, 11) === "ReactNative") {
+            setMobileApp(true);
+        }
+    }, []);
 
     return (
         <div>
@@ -15,10 +22,11 @@ const Project = ({ title, video, description, techStack, link }) => {
                 <p className='hidden sm:block lg:block text-sm bg-gray-400 font-mono rounded-xl p-1'>{techStack}</p>
             </div>
             {isExpanded && (
-                <div className='flex flex-col md:flex-row justify-evenly pt-2'>
+                <div>
                 <p className='sm:hidden lg:hidden text-sm bg-gray-400 font-mono rounded-xl p-1'>{techStack}</p>
+                <div className={`flex ${ mobileApp ? 'flex-col sm:flex-row ' : 'flex-col md:flex-row'} justify-center pt-2`}>
                     <div className='m-2 '>
-                        <video src={video} autoPlay loop muted className='md:max-w-screen-sm'/>
+                        <video src={video} autoPlay loop muted className={`${ mobileApp ? 'max-w-xs' : 'md:max-w-screen-sm'}`}/>
                     </div>
                     <div className='flex flex-col md:mx-4'>
                     <div className='font-mono md:my-2 h-fit w-fit border-l-4 border-black pl-2'>
@@ -28,6 +36,7 @@ const Project = ({ title, video, description, techStack, link }) => {
                         <a href={link} target='_blank' className='hover:underline'>→Visit</a>
                     </div>
                     </div>
+                </div>
                 </div>
             )}
         </div>
