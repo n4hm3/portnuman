@@ -33,9 +33,7 @@ const Project = ({ title, video, description, techStack, link }) => {
                     <div className={`flex ${mobileApp ? 'flex-col sm:flex-row' : 'flex-col md:flex-row'} justify-center pt-2`}>
                         <div className='m-2 relative'>
                             {!isVideoLoaded && (
-                                <div className={`absolute inset-0 flex items-center justify-center bg-gray-200 ${mobileApp ? 'w-full h-64 sm:w-64' : 'w-full h-64 md:w-96 md:h-72'}`}>
-                                    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
-                                </div>
+                                    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-black"></div>
                             )}
                             <video 
                                 ref={videoRef}
