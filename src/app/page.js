@@ -29,10 +29,13 @@ export default function Home() {
             <div className="flex justify-center">
               <div className="text-5xl ps-6 pt-8 md:py-9 md:leading-10 lg:py-12">
                 <h2>Hi, my name is Numan</h2>
-                <h3>Check out some of my work below ↓</h3>
+                <h3 className='pt-2'>Check out some of my work below ↓</h3>
               </div>
             </div>
             <h1 className="font-bold pt-24 pb-5 text-3xl flex justify-left">PROJECTS</h1>
+            <div className='pt-2'>
+            <Project title="<Hydrogen_Dashboard />" video="MCG.mp4" description="Over the summer, I worked as an intern for MCG, a sustainability-orientated company working towards facilitating green hydrogen. Working with a team of two other interns, I desigined and created a SaaS web application that allows users to track hydrogen routes. I contributed to all parts of the project, from the wireframe in Figma to managing the hosting with AWS." techStack="React/MongoDB/AWS" link="https://modularclintonglobal.com/"/>
+</div>
             <div className='pt-2'>
             <Project title="<Flower_Recognition_CNN />" video="FlowerCNN.mp4" description="Developed a flower classification system for identifying different types of flowers through deep learning and image processing, resulting in an average accuracy of 90%. I learned a lot about Convolutional Neural Network (CNN) architecture and how to combine different libraries for data manipulation. I used 4 layers, a ReLU activation function and trained over 10 epochs." techStack="Python/TensorFlow/Keras/OpenCV/Scikit-learn" link="https://github.com/n4hm3/FlowerRecognition"/>
 </div>
